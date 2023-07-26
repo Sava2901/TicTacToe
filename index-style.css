@@ -1,0 +1,236 @@
+html {
+    background-color: gray;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.header {
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstModal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.firstCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(43, 43, 43);
+}
+
+.main {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainHolder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(94, 94, 94);
+    gap: 40px;
+    padding: 60px;
+    border-radius: 20px;
+}
+
+.choice {
+    display: flex;
+    gap: 20px;
+}
+
+
+.choiceButton {
+    position: relative;
+    width: 125px;
+    height: 35px;
+}
+
+.choiceButton input {
+    width: 0;
+    height: 0;
+}
+
+.option {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    cursor: pointer;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
+
+input:checked+.option {
+    background-color: #2196F3;
+}
+
+.ingameButtons{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.ingameButtons > *{
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(204, 204, 204);
+
+}
+
+.ingameButtons > *:hover{
+    background-color: rgb(219, 219, 219);
+}
+
+.ingameButtons > *:active{
+    background-color: rgb(187, 187, 187);
+}
+
+.playButton{
+    height: 60px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(204, 204, 204);
+}
+
+.playButton:hover{
+    background-color: rgb(219, 219, 219);
+
+}
+
+.playButton:active{
+    background-color: rgb(187, 187, 187);
+
+}
+
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border: none;
+}
+
+.gridContainer>* {
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+}
+
+.noBorderTop {
+    border-top: none;
+}
+
+.noBorderLeft {
+    border-left: none;
+}
+
+.noBorderRight {
+    border-right: none;
+}
+
+.noBorderBottom {
+    border-bottom: none;
+}
+
+.footer {
+    height: 9vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+.secondModal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.secondCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    height: 400px;
+    width: 400px;
+    background-color: rgb(43, 43, 43);
+}
+
+.secondCard>* {
+    padding: 20px;
+}
+
+.resultText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    height: 70%;
+}
+
+.cardButton {
+    height: 20%;
+    width: 100%;
+    border-radius: 0px 0px 20px 20px;
+    border: none;
+    background-color: gray;
+}
+
+.cardButton:hover {
+    background-color: rgb(177, 177, 177);
+}
+
+.cardButton:active {
+    background-color: rgb(94, 94, 94);
+}
+
+.text {
+    font-family: "Roboto Mono";
+    font-size: 20px;
+}
+
+.titleText {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.resultText {
+    font-size: 30px;
+}

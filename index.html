@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./index-style.css">
+    <script src="./index-script.js" defer></script>
+    <title>Tic Tac Toe</title>
+</head>
+
+<body>
+
+    <div class="header">
+        <p class="text titleText">Tic Tac Toe</p>
+    </div>
+
+    <div class="firstModal">
+        <div class="firstCard">
+            <div class="choice">
+                <label class="choiceButton">
+                    <input type="radio" name="smth" value="x" checked>
+                    <span class="option text">X</span>
+                </label>
+
+                <label class="choiceButton">
+                    <input type="radio" name="smth" value="o">
+                    <span class="option text">O</span>
+                </label>
+            </div>
+
+            <div class="play">
+                <button class="text playButton">PLAY</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="mainHolder">
+            <div class="text">
+            </div>
+
+            <div class="gridContainer">
+                <button class="0 noBorderLeft noBorderTop gridChild text"></button>
+                <button class="1 noBorderTop gridChild text"></button>
+                <button class="2 noBorderTop noBorderRight gridChild text"></button>
+                <button class="3 noBorderLeft gridChild text"></button>
+                <button class="4 gridChild text"></button>
+                <button class="5 noBorderRight gridChild text"></button>
+                <button class="6 noBorderLeft noBorderBottom gridChild text"></button>
+                <button class="7 noBorderBottom gridChild text"></button>
+                <button class="8 noBorderBottom noBorderRight gridChild text"></button>
+            </div>
+
+            <div class="ingameButtons">
+                <button class="text restartButton">RESTART</button>
+                <button class="text backButton">BACK</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p class="text">done by Sava</p>
+    </div>
+
+    <div class="secondModal">
+        <div class="secondCard">
+            <p class="text resultText"></p>
+            <button class="text cardButton">Try Again!</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

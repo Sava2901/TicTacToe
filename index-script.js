@@ -62,10 +62,17 @@ play.addEventListener("click", () => {
                     }
                 }
 
-                if(moves == maxmoves)
+                if(moves > maxmoves)
                 {
-                    secondModal.style.display = "flex";
-                    resultText.textContent = "You Made a Draw!"
+                    if(winVerfy())
+                    {
+                        secondModal.style.display = "flex";
+                        resultText.textContent = "Computer Won!"
+                    }
+                    else{
+                        secondModal.style.display = "flex";
+                        resultText.textContent = "You Made a Draw!"
+                    }
                 }
             }
         });

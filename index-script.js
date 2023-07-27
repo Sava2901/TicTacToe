@@ -23,14 +23,7 @@ choice.forEach(button => {
 play.addEventListener("click", () => {
     firstModal.style.display = "none";
 
-    if (playerSymbol == "O") {
-        maxmoves = 9;
-        let row = getRandomInt(3);
-        let column = getRandomInt(3);
-        board[row][column] = computerSymbol;
-        possitions[column + row * 3].textContent = computerSymbol;
-        moves++;
-    }
+    firstComputerMove();
 
     possitions.forEach(button => {
         button.addEventListener("click", () => {
@@ -38,7 +31,7 @@ play.addEventListener("click", () => {
             let column = button.classList[0] - Math.floor(Number(button.classList[0]) / 3) * 3;
 
             if (board[row][column] == undefined) {
-                board[Math.floor(Number(button.classList[0]) / 3)][button.classList[0] - Math.floor(Number(button.classList[0]) / 3) * 3] = playerSymbol;
+                board[row][column] = playerSymbol;
                 button.textContent = playerSymbol;
                 moves++;
                 if (winVerfy()) {
@@ -62,12 +55,12 @@ play.addEventListener("click", () => {
                     }
                 }
 
-                if(moves > maxmoves)
+                if(moves == 9)
                 {
                     if(winVerfy())
                     {
                         secondModal.style.display = "flex";
-                        resultText.textContent = "Computer Won!"
+                        resultText.textContent = "You Won!"
                     }
                     else{
                         secondModal.style.display = "flex";
@@ -82,6 +75,7 @@ play.addEventListener("click", () => {
 restart.addEventListener("click", () => {
     clearBoard();
     moves = 0;
+    firstComputerMove();
 });
 
 back.addEventListener("click", () => {
@@ -94,6 +88,7 @@ tryAgain.addEventListener("click", () => {
     clearBoard();
     moves = 0;
     secondModal.style.display = "none";
+    firstComputerMove()
 })
 
 
@@ -112,6 +107,17 @@ function clearBoard() {
             }
         }
     });
+}
+
+function firstComputerMove(){
+    if (playerSymbol == "O") {
+        maxmoves = 9;
+        let row = getRandomInt(3);
+        let column = getRandomInt(3);
+        board[row][column] = computerSymbol;
+        possitions[column + row * 3].textContent = computerSymbol;
+        moves++;
+    }
 }
 
 function winVerfy() {
